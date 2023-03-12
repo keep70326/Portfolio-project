@@ -25,7 +25,7 @@ header nav {
 
 header nav ul {
   padding: 2rem;
-  width: 70%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,11 +84,133 @@ main section.right img {
   right: 25vw;
 }
 
+main section.table {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 500px;
+          flex: 3 1 500px;
+  padding: 2rem;
+}
+
+main section.table table {
+  border-collapse: collapse;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+main section.table table tr {
+  border-bottom: 2px solid gray;
+}
+
+main section.table table tr td {
+  padding: 1rem;
+}
+
+main section.table table tr td img {
+  margin-right: 1rem;
+}
+
+main section.table table tr:hover {
+  background-color: #e79c70;
+}
+
+main section.picture {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 600px;
+          flex: 1 1 600px;
+  position: relative;
+}
+
+main section.picture img {
+  width: 30vw;
+}
+
+main section.picture div.orangeRect {
+  width: 30vw;
+  height: 70vh;
+  background-color: #E08958;
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  z-index: -1;
+}
+
+main section.form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 600px;
+          flex: 1 1 600px;
+}
+
+main section.form form {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1.5rem;
+}
+
+main section.form form div label {
+  font-size: 1.5rem;
+}
+
+main section.form form div input, main section.form form div textarea {
+  background-color: #ffaa79;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.25rem;
+  border: none;
+  width: 90%;
+}
+
+main section.form form div textarea {
+  vertical-align: top;
+}
+
+main section.form form button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #E08958;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+main div.line {
+  background-color: gray;
+  width: 3px;
+}
+
+main section.contact {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 550px;
+          flex: 1 1 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+main section.contact div.contact h2 {
+  margin: 1rem 0rem;
+}
+
 .active {
   color: #E08958;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   .orange {
     opacity: 0.8;
   }
@@ -102,6 +224,9 @@ main section.right img {
   header nav ul li {
     padding: 1rem 0rem;
     border-bottom: 2px solid #836161;
+  }
+  header nav ul li ul li {
+    border-bottom: none;
   }
   main section.right {
     display: -webkit-box;
@@ -119,6 +244,30 @@ main section.right img {
     position: static;
     width: 50vw;
     height: 50vw;
+  }
+  main section.picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section.picture img {
+    width: 40vw;
+    margin-bottom: 2rem;
+  }
+  main section.picture div.orangeRect {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  main section.form form button {
+    margin-top: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
